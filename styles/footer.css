@@ -1,0 +1,147 @@
+.main-footer {
+    background: var(--primary-blue);
+    color: var(--text-light);
+    padding-top: 4rem;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+}
+
+.footer-section h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 0.8rem;
+}
+
+.footer-section h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 50px;
+    height: 3px;
+    background: var(--accent);
+    border-radius: 2px;
+}
+
+/* Contact Info Styles */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.contact-item i {
+    font-size: 1.2rem;
+    color: var(--accent);
+}
+
+/* Quick Links Styles */
+.quick-links {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    gap: 0.8rem;
+}
+
+.quick-links a {
+    color: var(--text-light);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.quick-links a::before {
+    content: '←';
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.quick-links a:hover {
+    color: var(--accent);
+}
+
+.quick-links a:hover::before {
+    opacity: 1;
+}
+
+/* Social Media Styles */
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--text-light);
+    background: rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.social-link:hover {
+    transform: translateY(-3px);
+}
+
+/* Footer Bottom Styles */
+.footer-bottom {
+    margin-top: 4rem;
+    padding: 1.5rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-bottom .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sitemap-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.sitemap-links a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 0.9rem;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.sitemap-links a:hover {
+    opacity: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-bottom .footer-container {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .sitemap-links {
+        justify-content: center;
+    }
+}

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مقالات تخصصی | دکتر محمدعلی جوادی</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/articles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="main-header">
+        <nav class="main-nav">
+            <div class="logo">
+                <img src="../images/logo.png" alt="لوگو دکتر جوادی">
+            </div>
+            <button class="mobile-menu-toggle" aria-label="منو">
+                <span class="hamburger-icon"></span>
+            </button>
+            <div class="nav-container">
+                <ul class="nav-links">
+                    <li><a href="index.html">صفحه اصلی</a></li>
+                    <li><a href="about.html">درباره دکتر</a></li>
+                    <li><a href="services.html">خدمات</a></li>
+                    <li><a href="appointment.html">نوبت‌دهی</a></li>
+                    <li><a href="articles.html">مقالات</a></li>
+                    <li><a href="contact.html">تماس</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- Hero Section -->
+    <section class="articles-hero">
+        <div class="hero-overlay">
+            <h1>مقالات و آموزش</h1>
+            <p>مطالب تخصصی در حوزه چشم‌پزشکی و سلامت بینایی</p>
+        </div>
+    </section>
+      <!-- Search and Filter Section -->
+      <section class="search-filter-section">
+          <div class="search-container">
+              <!-- Advanced Search Input -->
+              <div class="search-box">
+                  <i class="icon-search"></i>
+                  <input 
+                      type="text" 
+                      id="searchInput" 
+                      placeholder="جستجو در مقالات چشم‌پزشکی..."
+                      autocomplete="off"
+                  >
+                  <button class="clear-search" id="clearSearch">
+                      <i class="icon-close"></i>
+                  </button>
+              </div>
+
+              <!-- Category Filters -->
+              <div class="filter-container">
+                  <div class="filter-groups">
+                      <select class="filter-select" id="categoryFilter">
+                          <option value="">همه موضوعات</option>
+                          <option value="cornea">قرنیه</option>
+                          <option value="lasik">لیزیک و لازک</option>
+                          <option value="keratoconus">قوز قرنیه</option>
+                          <option value="dryeye">خشکی چشم</option>
+                          <option value="cataract">آب مروارید</option>
+                      </select>
+
+                      <select class="filter-select" id="dateFilter">
+                          <option value="">تاریخ انتشار</option>
+                          <option value="newest">جدیدترین</option>
+                          <option value="oldest">قدیمی‌ترین</option>
+                      </select>
+                  </div>
+
+                  <div class="active-filters" id="activeFilters">
+                      <!-- Active filters will be added here dynamically -->
+                  </div>
+              </div>
+          </div>
+      </section>
+    <!-- Articles Grid -->
+    <main class="articles-container">
+        <!-- Featured Article -->
+        <article class="featured-article">
+            <div class="article-image">
+                <img src="../images/articles/lasik-surgery.jpg" alt="جراحی لیزیک">
+            </div>
+            <div class="article-content">
+                <div class="article-category">جراحی لیزیک</div>
+                <h2>همه چیز درباره جراحی لیزیک و لازک</h2>
+                <p>آشنایی با روش‌های مختلف جراحی لیزیک و لازک و مقایسه آنها...</p>
+                <div class="article-meta">
+                    <span class="date">۱۵ مهر ۱۴۰۲</span>
+                    <div class="share-buttons">
+                        <button class="share-btn telegram"><i class="icon-telegram"></i></button>
+                        <button class="share-btn whatsapp"><i class="icon-whatsapp"></i></button>
+                        <button class="share-btn copy-link"><i class="icon-link"></i></button>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- Articles Grid -->
+        <div class="articles-grid">
+            <!-- Regular Article Cards -->
+            <article class="article-card">
+                <div class="article-image">
+                    <img src="../images/articles/keratoconus.jpg" alt="قوز قرنیه">
+                </div>
+                <div class="article-content">
+                    <div class="article-category">قوز قرنیه</div>
+                    <h3>تشخیص و درمان قوز قرنیه</h3>
+                    <p>روش‌های تشخیص زودهنگام و درمان قوز قرنیه...</p>
+                    <div class="article-meta">
+                        <span class="date">۱۰ مهر ۱۴۰۲</span>
+                        <div class="share-buttons">
+                            <button class="share-btn"><i class="icon-share"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <!-- Add more article cards -->
+        </div>
+
+        <!-- Pagination -->
+        <div class="pagination">
+            <button class="prev-page">قبلی</button>
+            <div class="page-numbers">
+                <span class="active">۱</span>
+                <span>۲</span>
+                <span>۳</span>
+            </div>
+            <button class="next-page">بعدی</button>
+        </div>
+    </main>
+    <!-- محتوای صفحه -->
+    <link rel="stylesheet" href="../styles/footer.css">
+    <!-- اضافه کردن کد فوتر قبل از تگ body -->
+    <?php include 'components/footer.html'; ?>
+</body>
+</html>
